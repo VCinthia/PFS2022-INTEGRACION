@@ -1,19 +1,23 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { Escuela } from "src/escuela/escuela.entity";
+import { Column, Entity, JoinColumn, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('ciudades')
 export class Ciudad {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     private idCiudad : number;
     @Column()
     private nombre : string;
 
-    constructor(id : number, nombre : string){
-        this.idCiudad = id;
+    @OneToMany(type => Escuela,//una ciudad puede tener muchas escuelas
+    escuela => escuela.ciudad)
+    @JoinColumn()
+    public escuelas : Escuela[];
+
+    constructor( nombre : string){
         this.nombre = nombre;
     };
     
-    public getIdCiudad(): number { return this.idCiudad; }
-    public setIdCiudad(idCiudad: number): void { this.idCiudad = idCiudad; }
-    public getNombre(): string { return this.nombre; }
-    public setNombre(nombre: string): void { this.nombre = nombre; }
+    public getIdCiudad() : number { return this.idCiudad; }
+    public getNombre() : string { return this.nombre; }
+    public setNombre(nombre : string): void { this.nombre = nombre; }
 }

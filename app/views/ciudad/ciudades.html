@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades</title>
+    <link href="../../css/reset.css" type="text/css" rel="stylesheet">
+    <link href="../../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../../css/destacados.css" type="text/css" rel="stylesheet">
+    <link href="../../css/populares.css" type="text/css" rel="stylesheet">
+    <link href="../../css/login.css" type="text/css" rel="stylesheet"> 
+</head>
+<body class="app">
+    <header class="encabezado">
+        <nav class="menu">
+            <ul class="menu__lista">
+                <li class="menu__item">
+                    <a class="menu__link" href="../../index.html">
+                        <i class="fas fa-bookmark"></i>
+                        Inicio
+                    </a>
+                    <a class="menu__link activo " href="#">
+                        <i class="fas fa-map-marked"></i>
+                        Ciudad
+                    </a>
+                    <a class="menu__link" href="./cargarCiudad.html">
+                        <i class="fas fa-plus-circle"></i>
+                        Cargar Ciudad
+                    </a>
+                </li>
+            </ul>            
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <section class="populares">
+            <div class="populares__items">
+                <div class="populares__info">
+                    <div class="populares__header">
+                        <h4 class="populares__titulo">
+                            <i class="populares__icon fab fa-buromobelexperte"></i>
+                            Ciudades
+                        </h4>
+                    </div>
+                </div>
+                <div class="populares__contenido">
+                    <div class="populares__card"><!-- EJEMPLO DE COMO SE VERIA -->
+                        <img class="populares__card___imagen" src="../../img/ciudades.jpg"></img>
+                        <div class="populares__card___base">
+                            <div class="populares__card___header">
+                                <div class="populares__principal ">
+                                    <!--BOTON ELIMINAR-->
+                                        <a class="populares__boton btn-delete" type="submit" id="${id}">                            
+                                            <i class="fas fa-times-circle"></i>
+                                        </a>                                                   
+                                    <!--BOTON EDITAR-->                
+                                        <!-- <button> -->
+                                            <a class="populares__boton btn__edit populares__boton btn__edit" type="submit" href="./editarCiudad.html?id=${id}">                                           
+                                            <i class="populares__icon fas fa-edit"></i>            
+                                            </a>                                            
+                                        <!-- </button> -->
+                                </div> 
+                                <h5 class="populares__card___titulo">Nombre Ciudad</h5>
+                            </div>
+                            <div class="populares__card___descripcion">
+                                Datos ciudad
+                            </div>
+                        </div>
+                    </div>
+                    <!--TARJETA-->
+                    <div class="ciudades__crud" data-card >
+                        <!--js de ciudad controller-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodapie">PFS Cinthia Vota - 2022</footer>
+    <script src="../../js/fontawesome.all.min.js"></script>
+    <script type="text/html" src="../../../src/ciudad/ciudad.ts"></script>
+</body>
+</html>

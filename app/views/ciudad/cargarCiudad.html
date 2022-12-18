@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Ciudad</title>
+    <link href="../../css/reset.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/destacados.css" rel="stylesheet">
+    <link href="../../css/populares.css" rel="stylesheet">
+    <link href="../../css/login.css" rel="stylesheet"> 
+</head>
+<body class="app">
+    <header class="encabezado">
+        <nav class="menu">
+            <ul class="menu__lista">
+                <li class="menu__item">
+                    <a class="menu__link" href="../../index.html">
+                        <i class="fas fa-bookmark"></i>
+                        Inicio
+                    </a>
+                    <a class="menu__link activo " href="./ciudades.html">
+                        <i class="fas fa-home"></i>
+                        Ciudades
+                    </a>
+                </li>
+            </ul>            
+        </nav>
+    </header>
+        
+    <section class="form__ciudad">
+        <div class="wrapper">
+            <form class="ciudad" data-form>
+                <p class="title">Cargar Ciudad</p>
+                <div  class="input-container">
+                <input data-id-ciudad class="input" type="number" id="id-ciudad" nombre="id-ciudad" placeholder="ID de ciudad" required />
+                <!-- <span class="input-menssage-error">Este campo es requerido</span> -->
+                </div>
+                <div class="input-container">
+                <input data-nombre-ciudad class="input" type="text" id="nombre-ciudad" nombre="nombre-ciudad" placeholder="Nombre de ciudad" required />
+                <!-- <span class="input-menssage-error">Este campo es requerido</span> -->
+                </div>
+                <button >                
+                    <span class="state">Cargar</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer class="rodapie">PFS Cinthia Vota - 2022</footer>
+    <script src="../../js/fontawesome.all.min.js"></script>
+</body>
+</html>

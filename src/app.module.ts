@@ -4,6 +4,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CiudadModule } from './ciudad/ciudad.module';
+import { ProfesorModule } from './profesor/profesor.module';
+import { EstudianteModule } from './estudiante/estudiante.module';
+import { EscuelaModule } from './escuela/escuela.module';
+import { ClaseModule } from './clase/clase.module';
 
 @Module({
   imports: [
@@ -13,12 +18,17 @@ import { AppService } from './app.service';
        host: "localhost",
        port: 3306,
        username: "root",
-       password: "*************",//cambiar contraseña
+       password: "Sombra2907!",
        database: "escolar",
        entities: [
-          "dist/**/**.entity{.ts,.js}"
+          "dist/**/**.entity{.ts,.js}"//ver
        ],
-       "synchronize": false})
+       "synchronize": false}),
+       CiudadModule,
+       ProfesorModule,
+       EstudianteModule,
+       EscuelaModule,
+       ClaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
